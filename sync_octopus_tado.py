@@ -419,6 +419,10 @@ def get_meter_reading_total_consumption(api_key, mprn, gas_serial_number, tado=N
 
         if response.status_code == 200:
             meter_readings = response.json()
+            print(
+                "Meter readings: "
+                f"{meter_readings}"
+            )
             total_consumption += sum(
                 interval["consumption"] for interval in meter_readings["results"]
             )
