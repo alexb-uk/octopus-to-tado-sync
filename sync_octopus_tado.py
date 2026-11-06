@@ -408,7 +408,7 @@ def get_meter_reading_total_consumption(api_key, mprn, gas_serial_number, tado=N
     period_from = datetime.now() - timedelta(days=1095)  # 3 years back
     url = (
         f"https://api.octopus.energy/v1/gas-meter-points/{mprn}/meters/"
-        f"{gas_serial_number}/consumption/?group_by=quarter&period_from="
+        f"{gas_serial_number}/consumption/?group_by=month&period_from="
         f"{period_from.isoformat()}Z"
     )
 
