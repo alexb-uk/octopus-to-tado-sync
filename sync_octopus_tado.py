@@ -346,7 +346,7 @@ def get_consumption_since_date(api_key, mprn, gas_serial_number, since_datetime)
 
     url = (
         f"https://api.octopus.energy/v1/gas-meter-points/{mprn}/meters/"
-        f"{gas_serial_number}/consumption/?group_by=quarter&period_from="
+        f"{gas_serial_number}/consumption/?group_by=month&period_from="
         f"{since_datetime.isoformat()}Z"
     )
     consumption_delta = 0.0
